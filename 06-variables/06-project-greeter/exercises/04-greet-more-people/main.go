@@ -8,6 +8,11 @@
 
 package main
 
+import (
+	"fmt"
+	"os"
+)
+
 // ---------------------------------------------------------
 // EXERCISE: Greet More People
 //
@@ -28,9 +33,22 @@ package main
 // ---------------------------------------------------------
 
 func main() {
-	// TYPE YOUR CODE HERE
+	if len(os.Args) >= 4 {
+		var (
+			count = len(os.Args) - 1
+			bilbo = os.Args[1]
+			balbo = os.Args[2]
+			bungo = os.Args[3]
+		)
 
-	// BONUS #1:
-	// Observe the error if you pass less then 3 arguments.
-	// Search on the web how to solve that.
+		fmt.Println("There are", count, "people")
+		fmt.Println("Hello great", bilbo)
+		fmt.Println("Hello great", balbo)
+		fmt.Println("Hello great", bungo)
+		fmt.Println("Nice to meet you all.")
+	}
+
+	if len(os.Args) <= 3 {
+		fmt.Println("Please give more names!")
+	}
 }
