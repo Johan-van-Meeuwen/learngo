@@ -28,7 +28,7 @@ func main() {
 
 	// ADD YOUR CODE BELOW:
 
-	color = "red"
+	color = "blue"
 
 	fmt.Println(color)
 }
