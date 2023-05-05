@@ -8,7 +8,10 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 // ---------------------------------------------------------
 // EXERCISE: Raw Concat
@@ -33,13 +36,9 @@ import "fmt"
 // ---------------------------------------------------------
 
 func main() {
-	// uncomment the code below
-	// name := "and get the name from the command-line"
+	name := os.Args[1]
 
-	// replace and concatenate the `name` variable
-	// after `hi ` below
-
-	msg := `hi CONCATENATE-NAME-VARIABLE-HERE!
+	msg := `hi ` + name + `!
 how are you?`
 
 	fmt.Println(msg)
